@@ -1,4 +1,3 @@
-import './App.css'
 const course = 'Half Stack application development'
 const part1 = 'Fundamentals of React'
 const exercises1 = 10
