@@ -1,5 +1,6 @@
 export const Content = (props:any) => {
+    console.log('Props', props);
     return (
-        <p> {props.part} {props.excercise}</p>
+        <p> {props.part?.name} {props.part?.exercises}</p>
     )
 }
