@@ -17,7 +17,7 @@ function App() {
       <Content part = {part1} excercise = {exercises1}/>
       <Content part = {part2} excercise = {exercises2}/>
       <Content part = {part3} excercise = {exercises3}/>
-      <Total total = { exercises1 + exercises2 + exercises3}/>
+      <Total total = { exercises1 + exercises2 + exercises3 }/>
     </div>
   )
 }
