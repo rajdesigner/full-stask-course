@@ -1,6 +1,7 @@
 import { Content } from "./Content";
 import { Header } from "./Header";
 import { Total } from "./Total";
+import { Accordion } from "./Accordion";
 
 const course = 'Half Stack application development'
 const parts = [
@@ -24,6 +25,7 @@ function App() {
       <Header course = {course}/>
       <Content part = {parts}/>
       <Total total = { parts.reduce((a, b) => a + b.exercises, 0) }/>
+      <Accordion></Accordion>
     </div>
   )
 }
