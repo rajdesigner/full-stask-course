@@ -1,11 +1,56 @@
 import { useState, useEffect } from 'react'
 import './App.css'
-import { HeaderLabel } from './Header';
+import { Header } from './Header';
 import { Button } from './Button';
 import { Statistics } from './Statistics';
 import { Anecdotes } from './Anecdotes';
+import { Course } from './Course';
 
 function App() {
+  const courses = [
+    {
+      name: 'Half Stack application development',
+      id: 1,
+      parts: [
+        {
+          name: 'Fundamentals of React',
+          exercises: 10,
+          id: 1
+        },
+        {
+          name: 'Using props to pass data',
+          exercises: 7,
+          id: 2
+        },
+        {
+          name: 'State of a component',
+          exercises: 14,
+          id: 3
+        },
+        {
+          name: 'Redux',
+          exercises: 11,
+          id: 4
+        }
+      ]
+    }, 
+    {
+      name: 'Node.js',
+      id: 2,
+      parts: [
+        {
+          name: 'Routing',
+          exercises: 3,
+          id: 1
+        },
+        {
+          name: 'Middlewares',
+          exercises: 7,
+          id: 2
+        }
+      ]
+    }
+  ]
   const anecdotes = [
     'If it hurts, do it more often.',
     'Adding manpower to a late software project makes it later!',
@@ -31,10 +76,11 @@ function App() {
 
   return (
     <>
-     <HeaderLabel title={'Give feedback'}/>
+     {/* <Header title={'Give feedback'}/>
      <Button buttonArr={feedBackButtonArr} goodCount={goodCount} badCount={badCount} neutralCount={neutralCount} setGoodCount = {setGoodCount} setBadCount = {setBadCount} setNeutralCount={setNeutralCount}/>
      <Statistics title='Statistics' goodCount={goodCount} neutralCount={neutralCount} badCount={badCount}  />
-     <Anecdotes anecdotes = {anecdotes} votesObj = {votesObj}/>
+     <Anecdotes anecdotes = {anecdotes} votesObj = {votesObj}/> */}
+     <Course courses = {courses}/>
     </>
   )
 }

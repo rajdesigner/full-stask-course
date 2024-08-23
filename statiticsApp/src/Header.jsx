@@ -1,7 +1,7 @@
-export const HeaderLabel = ({title}) => {
+export const Header = ({title}) => {
     return(
         <>
-            <h3> {title} </h3>
+            <h2> {title} </h2>
         </>
     )
 }
