@@ -4,10 +4,9 @@ export const Content = ({phoneBook}) => {
             <ul>
                 {
                     phoneBook.map((book) => (
-                        <li>
+                        <li key={book.name}>
                             <h3>{book.name}</h3>
                             <p>{book.number}</p>
-
                             <hr/>
                         </li>
                     ))

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const Form = ({ setPhoneBook }) => {
+export const Form = ({phonebook, setPhoneBook }) => {
   const [newEntry, setNewEntry] = useState({ name: '', number: '' });
 
   const handleFormValues = (event) => {
@@ -10,6 +10,17 @@ export const Form = ({ setPhoneBook }) => {
 
   const submitForm = (event) => {
     event.preventDefault();
+
+    // Check if the entry already exists in the phonebook
+    const isDuplicate = phonebook.some(
+        (entry) => entry.name === newEntry.name
+    );
+
+    if(isDuplicate){
+        alert(`${newEntry.name} is already added to phonebook`);
+        return;
+    }
+
     setPhoneBook((prevPhoneBook) => [...prevPhoneBook, newEntry]);
     setNewEntry({ name: '', number: '' }); // Clear form after submission
   };
